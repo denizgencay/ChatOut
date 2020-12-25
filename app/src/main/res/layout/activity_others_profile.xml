@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="arsi.dev.chatout.OthersProfileActivity"
+    >
+
+    <FrameLayout
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BF0505"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="ChatOut"
+            android:textColor="#FAFAFA"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/others_profile_block"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_marginVertical="5dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_block_white_24dp" />
+
+        <ImageView
+            android:id="@+id/others_profile_follow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_marginVertical="5dp"
+            android:layout_marginRight="75dp"
+            android:clickable="true"
+            android:src="@drawable/ic_person_add_24dp" />
+
+        <ImageView
+            android:id="@+id/others_profile_notification"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="125dp"
+            android:clickable="true"
+            android:src="@drawable/zil" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/others_profile_info_relative"
+        android:layout_below="@id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/red"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/others_profile_profile_photo"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/others_profile_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/others_profile_profile_photo"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FAFAFA"
+            android:layout_marginVertical="5dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/others_profile_username"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/kutu"
+            android:layout_marginHorizontal="50dp"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.4"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Takipçi"
+                android:textSize="16sp"
+                android:textColor="#BF0505"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="@id/top"
+                app:layout_constraintBottom_toBottomOf="@id/bottom"
+                app:layout_constraintLeft_toLeftOf="@id/leftLeft"
+                app:layout_constraintRight_toRightOf="@id/leftRight" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="@id/rightLeft"
+                app:layout_constraintRight_toRightOf="@id/rightRight"
+                app:layout_constraintTop_toTopOf="@id/top"
+                app:layout_constraintBottom_toBottomOf="@id/bottom"
+                android:text="Takip"
+                android:textColor="#BF0505"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/others_profile_followers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/bottom"
+                app:layout_constraintLeft_toLeftOf="@id/leftLeft"
+                app:layout_constraintRight_toRightOf="@id/leftRight"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="#BF0505"
+                />
+
+            <TextView
+                android:id="@+id/others_profile_followings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/bottom"
+                app:layout_constraintLeft_toLeftOf="@id/rightLeft"
+                app:layout_constraintRight_toRightOf="@id/rightRight"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:textColor="#BF0505"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/others_profile_pencil_man_relative"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/others_profile_info_relative"
+        android:layout_above="@id/others_relative_button"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/kalem" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/others_profile_about_me_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/others_profile_info_relative"
+        android:visibility="gone"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/others_profile_about_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="20sp"
+            android:textAlignment="center"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/others_profile_chat_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/others_profile_about_me_relative"
+        android:layout_marginTop="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/others_profile_active_chat_relative_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/balloon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/asdasd"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/active_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aktif Sohbet"
+                android:textSize="16sp"
+                android:textColor="#BF0505"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/balloon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+            <RelativeLayout
+                android:id="@+id/others_profile_blocked_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/unlem"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_toLeftOf="@id/alert_text"
+                    android:src="@drawable/unlem"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/alert_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Engellediğiniz biri konuşmada."
+                    android:textColor="#000"
+                    android:textSize="11sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="5dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/others_profile_active_chat_relative_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="visible"
+            android:layout_below="@id/others_profile_active_chat_relative_1">
+
+            <TextView
+                android:id="@+id/others_profile_chat_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="#BF0505"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/others_attendants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Katılım Durumu"
+                android:layout_below="@id/others_profile_chat_title"
+                android:textSize="14sp"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/others_attendants"
+                android:text="Bitiş Saati"
+                android:layout_below="@id/others_profile_chat_title"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:layout_marginLeft="40dp" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/others_profile_attendants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/others_attendants"
+                android:layout_marginLeft="50dp"
+                android:textSize="14sp"
+                android:textColor="#BF0505"
+                android:text="17/20"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/others_profile_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#BF0505"
+                android:layout_below="@id/others_attendants"
+                android:layout_toRightOf="@id/others_profile_attendants"
+                android:textSize="14sp"
+                android:text="23:30"
+                android:layout_marginLeft="85dp" />
+
+            <Button
+                android:id="@+id/others_profile_go_to_chat"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:text="Sohbete Git"
+                android:background="@drawable/mybutton"
+                android:layout_below="@id/others_attendants"
+                android:layout_alignParentEnd="true"
+                android:textColor="#FAFAFA"
+                android:textAllCaps="false"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/others_relative_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/others_profile_go_to_dict"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sözlük"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/mybutton"
+            android:textColor="#FAFAFA"/>
+
+    </RelativeLayout>
+</RelativeLayout>

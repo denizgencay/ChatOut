@@ -1,0 +1,1 @@
+Kullanıcıların sınırlı süreler için açılan grup konuşmalarına katılıp anlık olarak birbirleriyle konuşabilecekleri, ekşi sözlük benzeri bir sözlük yapısı sayesinde fikirlerini birbirleriyle paylaşabilecekleri geniş çaplı bir sosyal medya uygulaması.# ChatOut

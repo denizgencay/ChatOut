@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="arsi.dev.chatout.InsideEntryActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BF0505"
+        >
+
+        <TextView
+            android:id="@+id/inside_entry_entry_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@id/inside_entry_delete"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="#FAFAFA"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/createComment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginRight="20dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/edit_comment" />
+
+        <ImageView
+            android:id="@+id/inside_entry_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="5dp"
+            android:layout_marginRight="75dp"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/delete_comment" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/insideEntryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar4"
+        android:overScrollMode="never"/>
+
+</RelativeLayout>

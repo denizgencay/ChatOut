@@ -1,0 +1,2 @@
+rootProject.name='ChatOut'
+include ':app', ':nativetemplates'

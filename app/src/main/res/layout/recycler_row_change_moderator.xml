@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/kutu"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/change_moderator_card">
+
+   <de.hdodenhof.circleimageview.CircleImageView
+       android:id="@+id/change_moderator_card_profile_photo"
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:src="@drawable/hugh"
+       android:layout_margin="20dp"
+       />
+
+    <TextView
+        android:id="@+id/change_moderator_card_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/change_moderator_card_profile_photo"
+        android:textSize="16sp"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

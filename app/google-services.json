@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "878090237786",
+    "firebase_url": "https://chatout-8664e.firebaseio.com",
+    "project_id": "chatout-8664e",
+    "storage_bucket": "chatout-8664e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878090237786:android:08f56864e516d8e1856563",
+        "android_client_info": {
+          "package_name": "arsi.dev.chatout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878090237786-r38dd3k35d0kn7oi12ii3745r08aus89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8X5B3hsmX8gPS27-IYV0aHnaKZDukaQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878090237786-r38dd3k35d0kn7oi12ii3745r08aus89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
